@@ -1,0 +1,12 @@
+/home/fried/Documents/PD2_copypaste/target/release/deps/enigo-0daeeadd6c9591a7.d: /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/lib.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/agent.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/linux/mod.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/linux/x11rb.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/linux/keymap.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/keycodes.rs
+
+/home/fried/Documents/PD2_copypaste/target/release/deps/libenigo-0daeeadd6c9591a7.rlib: /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/lib.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/agent.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/linux/mod.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/linux/x11rb.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/linux/keymap.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/keycodes.rs
+
+/home/fried/Documents/PD2_copypaste/target/release/deps/libenigo-0daeeadd6c9591a7.rmeta: /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/lib.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/agent.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/linux/mod.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/linux/x11rb.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/linux/keymap.rs /home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/keycodes.rs
+
+/home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/lib.rs:
+/home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/agent.rs:
+/home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/linux/mod.rs:
+/home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/linux/x11rb.rs:
+/home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/linux/keymap.rs:
+/home/fried/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/enigo-0.6.1/src/keycodes.rs:

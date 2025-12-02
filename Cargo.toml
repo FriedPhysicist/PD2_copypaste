@@ -7,3 +7,6 @@ edition = "2024"
 clipboard = "0.5.0"
 enigo = "0.6.1"
 rdev = "=0.5.3"
+
+[profile.release]
+debug = false
