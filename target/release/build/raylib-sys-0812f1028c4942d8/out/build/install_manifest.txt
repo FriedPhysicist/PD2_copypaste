@@ -1,0 +1,7 @@
+/home/fried/Documents/PD2_copypaste/target/release/build/raylib-sys-0812f1028c4942d8/out/lib64/libraylib.a
+/home/fried/Documents/PD2_copypaste/target/release/build/raylib-sys-0812f1028c4942d8/out/include/raylib.h
+/home/fried/Documents/PD2_copypaste/target/release/build/raylib-sys-0812f1028c4942d8/out/include/rlgl.h
+/home/fried/Documents/PD2_copypaste/target/release/build/raylib-sys-0812f1028c4942d8/out/include/raymath.h
+/home/fried/Documents/PD2_copypaste/target/release/build/raylib-sys-0812f1028c4942d8/out/lib64/pkgconfig/raylib.pc
+/home/fried/Documents/PD2_copypaste/target/release/build/raylib-sys-0812f1028c4942d8/out/lib64/cmake/raylib/raylib-config-version.cmake
+/home/fried/Documents/PD2_copypaste/target/release/build/raylib-sys-0812f1028c4942d8/out/lib64/cmake/raylib/raylib-config.cmake

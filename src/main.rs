@@ -1,52 +1,50 @@
 extern crate clipboard;
-use rdev::{listen, simulate, Key, EventType};
-use enigo::{
-    Enigo, Keyboard, Settings
-};
-use std::{thread, time};
+use raylib::prelude::*;
+use std::io::Read;
+use wl_clipboard_rs::{paste::{get_contents, ClipboardType, MimeType, Seat}};
+use enigo::{Enigo, Keyboard, Settings};
 
-use clipboard::ClipboardProvider;
-use clipboard::ClipboardContext;
+fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let (mut rl, thread) = raylib::init()
+        .size(115, 50)
+        .title("PD2_copypaste")
+        .build();
 
-fn main() {
-    let mut v : String = String::from("");
-    listen(move |event| {
-        match event.name {
-            Some(_) => {
-                v.push_str(event.clone().name.unwrap().as_str());
+    let mut time : f32 = 0.0;
+    let mut bwill_paste : bool = false;
+    let mut enigo = Enigo::new(&Settings::default()).unwrap();
+    
+    while !rl.window_should_close() {
+        let mut d = rl.begin_drawing(&thread);
 
-                let len : usize = v.len();
-                let key : &str = "!@#";
-
-                if len == key.len() {
-                    if v == key{
-                        let mut clipboard: ClipboardContext = ClipboardProvider::new().unwrap();
-                        let mut enigo = Enigo::new(&Settings::default()).unwrap();
-                        let clipboard_text : String = clipboard.get_contents().unwrap().clone();
-                        
-                        if !clipboard_text.starts_with("/w *") {
-                            return;
-                        }
-
-                        thread::spawn(move || {
-                            for _ in 0..key.len() {
-                                thread::sleep(time::Duration::from_millis(50));
-                                simulate(&EventType::KeyPress(Key::Backspace)).unwrap();
-                            }
-                            thread::sleep(time::Duration::from_millis(500));
-                            enigo.text(&clipboard_text).unwrap();
-
-                            println!("Pasted! {:?}", &clipboard_text);
-                        }
-                        );
-                    }
-                }
-
-                if len >= key.len() {
-                    v.remove(0);
-                }
-            },
-            None => (),
+        if d.gui_button(Rectangle::new(0.0, 20.0, 115.0, 30.0), "Paste") {
+            bwill_paste = true;
         }
-    }).unwrap();
+
+        if bwill_paste {
+            time = time + d.get_frame_time();
+        }
+
+        if time >= 2.0 {
+            let result = get_contents(ClipboardType::Regular, Seat::Unspecified, MimeType::Text);
+
+            match result {
+                Ok((mut pipe, _)) => {
+                    let mut contents = vec![];
+                    pipe.read_to_end(&mut contents)?;
+                    let mut enigo = Enigo::new(&Settings::default()).unwrap();
+                    enigo.text(&String::from_utf8_lossy(&contents)).unwrap();
+                    println!("Pasted: {}", String::from_utf8_lossy(&contents));
+                }
+                _ => println!("Possible error.")
+            }
+
+            bwill_paste = false;
+            time = 0.0;
+        }
+
+        d.clear_background(Color::BLACK);
+    }
+
+    Ok(())
 }
